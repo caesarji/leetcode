@@ -5,48 +5,34 @@
  */
 
 // @lc code=start
-/*
- * @lc app=leetcode id=496 lang=cpp
- *
- * [496] Next Greater Element I
- */
-
-// @lc code=start
 class Solution
 {
 public:
     vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
     {
-
-        vector<int> ans;
-        int n = nums2.size();
         map<int, int> m;
+        stack<int> st;
 
-        for (int i = 0; i < nums2.size(); i++)
+        for (auto c : nums2)
         {
-            m[nums2[i]] = i;
-        }
 
+            while (!st.empty() && st.top() < c)
+            {
+                m[st.top()] = c;
+                st.pop();
+            }
+            st.push(c);
+        }
+        for (auto c : m)
+        {
+            cout << c.first << " " << c.second << endl;
+        }
+        vector<int> ans;
         for (auto c : nums1)
         {
-            int i = m[c];
-            bool flag = false;
-            for (; i < n; i++)
-            {
-
-                if (nums2[i] > nums2[m[c]])
-                {
-                    ans.push_back(nums2[i]);
-                    flag = true;
-                    break;
-                }
-            }
-            if (!flag)
-                ans.push_back(-1);
+            m.count(c) ? ans.push_back(m[c]) : ans.push_back(-1);
         }
         return ans;
     }
 };
-// @lc code=end
-
 // @lc code=end
