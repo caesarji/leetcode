@@ -10,50 +10,48 @@ class Solution
 public:
     vector<int> grayCode(int n)
     {
-
-        // obtaining ss as binary number string of n
-
-        stringstream s;
-        while (n > 0)
-        {
-            s << (n % 2);
-            n /= 2;
-        }
-        string ss = "";
-        string word;
-        while (s >> word)
-        {
-            ss += word;
-        }
-        reverse(ss.begin(), ss.end());
-
+        vector<int> ans;
         if (n == 1)
         {
-            vector<int> ans(2);
-            ans[0] = 0;
-            ans[1] = 1;
+            ans.push_back(0);
+            ans.push_back(1);
             return ans;
         }
-
-        vector<int> v = grayCode(n - 1);
-        vector<int> ans;
-
-        int siz = v.size();
-        for (int i = 0; i < siz; i++)
+        else
         {
-            ans.push_back(v[i]);
-        }
 
-        for (int i = siz - 1; i >= 0; i--)
-        {
-            int bsize = ss.size();
-            while (bsize != (n - 1))
+            vector<int> temp;
+            temp = grayCode(n - 1);
+            int size = temp.size();
+
+            for (auto c : temp)
             {
-                ss = "0" + ss;
+                ans.push_back(c);
             }
-            ss = "1" + ss;
-            cout << ss << endl;
+            cout << "here" << endl;
+            bool flag = false;
+            int bit = 0;
+            for (int i = size - 1; i >= 0; i--)
+            {
+                int x = temp[i];
+                if (!flag)
+                {
+                    while (x > 0)
+                    {
+                        x /= 2;
+                        bit++;
+                        flag = true;
+                    }
+                    if (!bit)
+                        bit++;
+                }
+                cout << temp[i] << " " << bit << " " << (1 << bit) << endl;
+                // bit++;
+                // if(!bit) bit++;
+                ans.push_back(temp[i] + (1 << bit));
+            }
         }
+        cout << "here" << endl;
         return ans;
     }
 };
