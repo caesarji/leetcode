@@ -13,7 +13,11 @@ public:
     bool help(vector<int> &m, int i, vector<int> &s)
     {
         if (i == m.size() && s[0] == 0 && s[1] == 0 && s[2] == 0 && s[3] == 0)
+        {
+            vector<int> v = {s[0], s[1], s[2], s[3]};
+            mm[v] = true;
             return true;
+        }
 
         for (int j = 0; j < 4; j++)
         {
@@ -34,6 +38,10 @@ public:
             sort(v.begin(), v.end());
             mm[v] = false;
         }
+        vector<int> v = {s[0], s[1], s[2], s[3]};
+        sort(v.begin(), v.end());
+        mm[v] = false;
+
         return false;
     }
 

@@ -42,16 +42,16 @@ int main()
     for (int i = 0; i < m; i++)
     {
 
-        cout<<"here"<<endl;
+        // cout<<"here"<<endl;
         int x = find(e[i].a);
         int y = find(e[i].b);
-        cout<<"here"<<endl;
+        // cout<<"here"<<endl;
         if (x != y)
         {
             sum += e[i].w;
             join(x, y);
         }
-        cout<<"here"<<endl;
+        // cout<<"here"<<endl;
     }
     cout<< sum<<endl;
 }
