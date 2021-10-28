@@ -1,22 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define long long int
+typedef long long int ll;
+
+ll M = 10e8 + 7;
 
 void solve()
 {
-    int n;
-    cin >> n;
-    vector<int> ar(n);
-    for (auto c : ar)
-    {
-        int x;
-        cin >> x;
-        ar.push_back(x);
-    }
+    ll n, k;
+    cin >> n >> k;
+  
+    
 }
 signed main()
 {
-    int t;
+    ll t;
     cin >> t;
     while (t--)
     {

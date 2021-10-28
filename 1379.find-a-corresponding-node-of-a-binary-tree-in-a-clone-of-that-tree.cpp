@@ -21,18 +21,16 @@ public:
     TreeNode *getTargetCopy(TreeNode *o, TreeNode *c, TreeNode *t)
     {
 
-        if (o == NULL)
-            return NULL;
-        else if (o == t)
-        {
+        if(o==NULL) return NULL;
+        if(o==t){
             return c;
         }
+
         TreeNode * l=getTargetCopy(o->left , c->left , t);
         TreeNode * r=getTargetCopy(o->right , c->right , t);
-        if(l) return l;
-        if(r) return r;
-        return  NULL;
-        
+        if(l) return l ;
+        if(r) return r ;
+        return NULL;
     }
 };
 // @lc code=end

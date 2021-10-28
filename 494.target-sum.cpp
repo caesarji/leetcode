@@ -8,26 +8,25 @@
 class Solution
 {
 public:
-    int dp[2005][25];
+    int cnt;
     int n;
-    int helper(vector<int> &nums, int t, int i, int sum)
+    void help(vector<int> &nums, int ind, int sum, int t)
     {
-        int ans;
-        if (i == n && sum == t)
-            return 1;
-        else if (i == n && sum != t)
-            return 0;
-
-        if (dp[sum + 1000][i] != -1)
-            return dp[sum + 1000][i];
-        ans = helper(nums, t, i + 1, sum + nums[i]) + helper(nums, t, i + 1, sum - nums[i]);
-        return dp[sum + 1000][i] = ans;
+        if (ind == n && sum == t)
+        {
+            cnt++;
+        }
+        if (ind >= n)
+            return;
+        help(nums, ind + 1, sum + nums[ind], t);
+        help(nums, ind + 1, sum - nums[ind], t);
     }
     int findTargetSumWays(vector<int> &nums, int t)
     {
         n = nums.size();
-        memset(dp, -1, sizeof(dp));
-        return helper(nums, t, 0, 0);
+        cnt = 0;
+        help(nums, 0, 0, t);
+        return cnt;
     }
 };
 // @lc code=end

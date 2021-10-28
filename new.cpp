@@ -33,9 +33,7 @@ int eggDrop(int n, int k)
 	// values plus 1.
 	for (x = 1; x <= k; x++)
 	{
-		res = max(
-			eggDrop(n - 1, x - 1),
-			eggDrop(n, k - x));
+		res = max(eggDrop(n - 1, x - 1),eggDrop(n, k - x));
 		if (res < min)
 			min = res;
 	}
