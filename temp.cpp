@@ -8,9 +8,8 @@ void solve()
 {
     ll n, k;
     cin >> n >> k;
-  
-    
 }
+
 signed main()
 {
     ll t;
