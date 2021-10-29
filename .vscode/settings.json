@@ -18,6 +18,9 @@
         "unordered_map": "cpp",
         "unordered_set": "cpp",
         "chrono": "cpp",
-        "cstdint": "cpp"
+        "cstdint": "cpp",
+        "cmath": "cpp",
+        "ratio": "cpp",
+        "complex": "cpp"
     }
 }
