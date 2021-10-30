@@ -1,18 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long int ll;
+#define ll              long long 
+#define pb              push_back
+#define all(v)          v.begin(),v.end()
 
 ll M = 10e8 + 7;
-
 void solve()
 {
     ll n, h;
     cin >> n >> h;
-    vector<ll> dm(n);
+    vector<ll> ar(n);
 
-    for (int i = 0; i < n; i++)
+    for (auto c:ar)
     {
-        cin >> dm[i];
+        cin >> c;
     }
 }
 

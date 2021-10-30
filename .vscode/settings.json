@@ -21,6 +21,7 @@
         "cstdint": "cpp",
         "cmath": "cpp",
         "ratio": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "numeric": "cpp"
     }
 }

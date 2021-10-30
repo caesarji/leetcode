@@ -1,0 +1,1 @@
+{"name":"Local: DES_cipher","url":"c:\\Users\\siddh\\Pictures\\codes\\DES_cipher.cpp","tests":[{"id":1631893264772,"input":"123456ABCD132536","output":"AABB09182736CCDD"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\siddh\\Pictures\\codes\\DES_cipher.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: first come first serve","url":"c:\\Users\\siddh\\Pictures\\codes\\first come first serve.cpp","tests":[{"id":1631718600609,"input":"5\n2 5 \n0 4\n3 6\n1 2\n2 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\siddh\\Pictures\\codes\\first come first serve.cpp","group":"local","local":true}
