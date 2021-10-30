@@ -6,13 +6,27 @@ ll M = 10e8 + 7;
 
 void solve()
 {
-    ll n, h;
-    cin >> n >> h;
-    vector<ll> dm(n);
+    ll n, x;
+    cin >> n >> x;
+    vector<ll> ar(n);
 
     for (int i = 0; i < n; i++)
     {
-        cin >> dm[i];
+        cin >> ar[i];
+    }
+
+    if (x >= n)
+    {
+        cout << "NO" << endl;
+        return;
+    }
+    else
+    {
+
+
+        
+        cout << "YES" << endl;
+        return;
     }
 }
 
